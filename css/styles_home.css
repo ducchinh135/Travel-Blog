@@ -1,0 +1,579 @@
+
+@import url('../css/fonts.css');
+
+html, body{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+
+:root {
+    --sky: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    --Abel: 'Abel', cursive;
+    --Anton: 'Anton', cursive;
+    --Josefin : 'Josefin', cursive;
+    --Lexend: 'Lexend', cursive;
+    --Livvic : 'Livvic', cursive;
+    --OpenSans: 'OpenSans', cursive;
+}
+
+
+/* ---------------- Global Classes ---------------*/
+
+a{
+    text-decoration: none;
+    color: #3f4954;
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;    
+    flex-wrap: wrap;
+}
+
+ul{
+    list-style-type: none;
+}
+
+h1{
+    font-family: var(--Lexend);
+    font-size: 2.5rem;
+}
+
+h2{
+    font-family: var(--Lexend);
+}
+
+h3{
+    font-family: var(--Abel);
+    font-size: 1.3rem;
+}
+
+button.btn{
+    border: none;
+    border-radius: 2rem;
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    cursor: pointer;
+    font-family: var(--Livvic);
+}
+
+span{
+    font-family: var(--Abel);
+}
+
+.container{
+    margin: 0 5vw;
+}
+
+.text-gray{
+    color: #3f4954;
+}
+
+p{
+    font-family: var(--Lexend);
+    color: #686666da;
+}
+
+main p , footer p{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+/* --------------- navbar ----------------- */
+
+.nav{
+    background: #ffffff;
+    padding: 0 2rem;
+    height: 0rem;
+    min-height: 10vh;
+    overflow: hidden;
+    transition: height 1s ease-in-out;
+}
+
+.nav .nav-menu{    
+    justify-content: space-between;
+}
+
+.nav .nav-items{
+    display: flex;
+    margin: 0;
+}
+
+.nav .nav-items .nav-link{
+    margin-left: 12px;
+    padding: 1.6rem 1rem 0.6rem 1rem;
+    font-size: 1.1rem;
+    position: relative;
+    font-family: var(--Abel);
+    cursor: pointer;
+    width: 50px;
+    text-align: center;
+}
+
+.nav-link:after {
+    content: '';
+    width: 100%;
+    height: 4px;
+    background: #104f55;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.nav-link:hover,
+.nav-link.active::after,
+.nav-link:hover::after {
+    opacity: 1;
+    transition: 0.4s;
+}
+
+/* .nav .nav-items .nav-link:hover{
+    background-color: #104f55;
+}
+
+.nav .nav-items .nav-link:hover {
+    color: #ffffff;
+} */
+
+.nav .nav-brand a{
+    font-size: 1.6rem;
+    padding: 1rem 0;
+    display: block;
+    font-weight: bold;
+}
+
+.nav .social{
+    padding: 1.4rem 0
+}
+
+.nav .social i{
+    padding: 0 .2rem;
+}
+
+.nav .social i:hover{
+    color: #a1c4cf;
+}
+
+
+/* -------x------- navbar ---------x------- */
+
+/* ----------------- Main Content----------- */
+
+/* --------------- Site title ---------------- */
+main .site-title{
+    background: url('../img/Background-image.png');
+    background-size: cover;
+    height: 110vh;
+    display: flex;
+    justify-content: center;
+}
+
+main .site-title .site-background{
+    padding-top: 10rem;
+    text-align: center;
+    color: #ffffff;
+}
+
+main .site-title h1, h3{
+    margin: .3rem;
+}
+
+main .site-title .btn{
+    margin: 1.8rem;
+    background: var(--sky)
+}
+
+main .site-title .btn:hover{
+    background: transparent;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+}
+
+/* --------x------ Site title --------x------- */
+
+/* --------------- Blog Carousel ------------ */
+
+main .blog{
+    background: url('../img/Abract01.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 100vh;
+    width: 100%;
+    background-size: 65%;
+}
+
+main .blog .blog-post{
+    padding-top: 6rem;
+}
+
+main .blog-post .blog-content{
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    min-width: 80%;
+    margin: 3rem 2rem;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+}
+
+main .blog-content img {
+    border-radius: 1rem 1rem 0rem 0rem;
+}
+
+main .blog-content .blog-title{
+    padding: 2rem 0;
+}
+
+main .blog-content .btn-blog{
+    padding: .7rem 2rem;
+    background: #ffffff;
+    margin: .5rem;
+}
+
+main .blog-content span{
+    display: block;
+}
+
+section .container .owl-nav{
+    position: absolute;
+    top: 0%;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.owl-nav .owl-prev .owl-nav-prev,
+.owl-nav .owl-next .owl-nav-next{
+    color: #3f4954;
+    background: transparent;
+    font-size: 2rem;
+}
+
+.owl-theme .owl-nav [class*='owl-']:hover{
+    background: transparent;
+    color: #104f55;
+}
+
+.owl-theme .owl-nav [class*='owl-']{
+    outline: none;
+}
+
+/* -------x------- Blog Carousel -----x------ */
+
+/* ---------------- Site Content ----------------*/
+
+main .site-content{
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+
+.post-content{
+    width: 100%;
+    
+}
+
+.post-content > .post-image, .post-title{
+    padding: 1rem 2rem;
+    position: relative;
+}
+
+.post-content > .post-image .post-info{
+    background: var(--sky);
+    padding: 1rem;
+    position: absolute;
+    bottom: 0%;
+    left: 20vw;
+    border-radius: 3rem;
+}
+
+.post-content > .post-image > div{
+    overflow: hidden;
+    border-radius: 1rem;
+}
+
+.post-content > .post-image .img{
+    width: 100%;
+    transition: all 1s ease;
+}
+
+.post-content > .post-image .img:hover{
+    transform: scale(1.3);
+}
+
+.post-content > .post-image .post-info span{
+    margin: 0 .5rem;
+}
+
+.post-content .post-title a{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.post-content .post-title .post-btn{
+    border-radius: 1rem;
+    padding: .7rem 1.5rem;
+    background: var(--sky)
+}
+
+/* -------x-------- Site Content --------x-------*/
+
+/* --------------- Sidebar ----------------------- */
+ .popular-post .post-content{
+    padding: 1rem 0;
+}
+
+ .popular-post h2{
+    padding-top: 1rem;
+}
+
+ .popular-post .post-info{
+    padding: .4rem .1rem !important;
+    bottom: 0rem !important;
+    left: 1.5rem !important;
+    border-radius: 0rem !important;
+    background: #ffffff !important;
+}
+
+.popular-post .post-title a{
+    font-size: 1rem;
+}
+
+/* --------x------ Sidebar -------------x--------- */
+
+/* --------x-------- Main Content------x---- */
+
+/* ----------------- Footer --------------------- */
+footer.footer{
+    height: 100%;
+    background: #0f0f0f;
+    position: relative;
+}
+
+footer.footer .container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+footer.footer .container > div{
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 3rem .9rem;
+}
+
+footer.footer .container h2{
+    color: #ffffff;
+}
+
+footer.footer .newsletter .form-element{
+    background: black;
+    display: flex;
+    align-items: center;
+    width: 86%;
+}
+
+footer.footer .newsletter .form-element input{
+    padding: .5rem .7rem;
+    border: none;
+    background: transparent;
+    color: white;
+    
+    font-size: 1rem;
+    width: 84%;
+}
+
+footer.footer .newsletter .form-element span{
+    background: var(--sky);
+    padding: .5rem .7rem;
+    cursor: pointer;
+}
+
+footer.footer .instagram div > img{
+    display: inline-block;
+    width: 25%;
+    height: 50%;
+    margin: .3rem .4rem;
+}
+
+footer.footer .follow div i{
+    color: #ffffff;
+    padding: 0 .4rem;
+}
+
+footer.footer .rights{
+    justify-content: center;
+    
+}
+
+footer.footer .rights h4 a{
+    color: #ffffff;
+}
+
+footer.footer .move-up{
+    position: absolute;
+    right: 6%;
+    top: 50%;
+}
+
+footer.footer .move-up span{
+    color: #104f55;
+}
+
+footer.footer .move-up span:hover{
+    color: #ffffff;
+    cursor: pointer;
+}
+
+footer .contact i{
+    color: #ffffff;
+}
+/* ---------x------- Footer -----------x--------- */
+
+
+/* ------------------ Mobile Nav ------------------ */
+
+.nav .toggle-collapse{
+    position: absolute;
+    top: 0%;
+    width: 90%;
+    display: none;
+}
+
+.nav .toggle-collapse .toggle-icons{
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.7rem 0;
+}
+
+.nav .toggle-collapse .toggle-icons i{
+    font-size: 1.4rem;
+    color: #3f4954;
+    cursor: pointer;
+}
+.nav-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+    z-index: 9;
+}
+
+.nav__mobile {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 320px;
+    max-width: 100%;
+    background-color: #ffffff;
+    transform: translateX(100%);
+    opacity: 0;
+    /* transition: all linear 0.2s; */
+    z-index: 10;
+}
+
+.nav__mobile-items {
+    margin-top: 24px;
+}
+
+.nav__mobile-link {
+    display: block;
+    padding: 8px 0px;
+    font-size: 1.1rem;
+   
+}
+
+.nav__mobile-close {
+    font-size: 1.4rem;
+    color: #3f4954;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+}
+
+.social__mobile {
+    display: flex;
+    justify-content: center;
+}
+
+.social__mobile a {
+    padding: 0 .2rem;
+}
+
+
+@media screen and (max-width: 63.938rem) and (min-width: 46.25rem) {
+    .nav .toggle-collapse{
+        display: initial;
+    }
+    .nav .nav-brand {
+        cursor: pointer !important;
+    }
+    .nav .social, .nav .nav-items{
+        display: none;
+    }
+    .post-content > .post-image .post-info{
+        left: 2rem !important;
+        bottom: 1.2rem !important;
+        border-radius: 0% !important;
+    }
+
+    .sidebar .popular-post .post-info{
+        display: none !important;
+    }
+
+    footer.footer .container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}  
+
+@media screen and (max-width: 46.188rem) {
+    .nav__mobile {
+        width: 100%;
+    }
+    .nav .toggle-collapse{
+        display: initial;
+    }
+    .nav .social, .nav .nav-items{
+        display: none;
+    }
+
+    main .site-content{
+        grid-template-columns: 100%;
+    }
+    
+    main .blog{
+        height: 125vh;
+    }
+
+    .post-content > .post-image .post-info{
+        display: none;
+    }
+
+    footer.footer .container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    footer.footer .container > div{
+        padding:  1rem .9rem !important;
+    }
+
+    footer .rights{
+        padding: 0 1.4rem;
+        text-align: center;
+    }
+
+    nav .toggle-collapse{
+        width: 80% !important;
+    }
+}
+
+/* ---------x-------- Mobile Nav -----------x------- */

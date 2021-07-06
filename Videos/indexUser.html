@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos</title>
+
+    <link rel="stylesheet" href="../css/reset.css">
+
+    <link rel="stylesheet" href="./venobox/venobox.css" type="text/css" media="screen" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
+    <script src="//unpkg.com/navigo@6"></script>
+    <!---------------- Cutom Styles -------------------------------->
+    <link rel="stylesheet" href="../css/styles_home.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body style="background-color: beige;">
+    <navigation-bar></navigation-bar>
+
+    <div class="wrapper" style="background-color: beige;">
+        <!-- Header -->
+        <section class="top__section">
+            <header>
+                <h1>Travel Videos</h1>
+                <p>Tourism. Education For The Mind & Education For The Heart.</p>
+                <a class="venobox" data-autoplay="true" data-vbtype="video" href="https://youtu.be/Au6LqK1UH8g"
+                    data-gall="myGallery"><button class="btn" style="border-radius:29px;">Watch Now</button></a>
+
+            </header>
+        </section>
+        <!-- End Header Section-->
+        <!-- Content -->
+        <section class="content__section" style="background-color: beige;">
+            <div class="playlist__one">
+                <h4 class="playlist__title">Section Title</h4>
+                <div class="videos">
+
+                    <div class="video" style="background-image: url(./imgages/img_video1.jpg)">
+                        <a class="venobox" data-autoplay="true" data-vbtype="video" href="https://youtu.be/Hfoi76YbnzA"
+                            data-gall="myGallery"><i class="fas fa-play-circle" onclick="playVideo()"></i></a>
+                    </div>
+                    <div class="video" style="background-image: url(./imgages/img_video2.jpg)">
+                        <a class="venobox" data-autoplay="true" data-vbtype="video"
+                            href="https://youtu.be/0he3R37nALM&t" data-gall="myGallery"><i
+                                class="fas fa-play-circle"></i></a>
+                    </div>
+                    <div class="video" style="background-image: url(./imgages/img_video3.jpg)">
+                        <a class="venobox" data-autoplay="true" data-vbtype="video" href="https://youtu.be/gqfHkH3W4lQ"
+                            data-gall="myGallery"><i class="fas fa-play-circle"></i></a>
+                    </div>
+                    <div class="video" style="background-image: url(./imgages/img_video4.jpg)">
+                        <a class="venobox" data-autoplay="true" data-vbtype="video" href="https://youtu.be/DIgv-e18OzA"
+                            data-gall="myGallery"><i class="fas fa-play-circle"></i></a>
+                    </div>
+                    <div class="video" style="background-image: url(./imgages/img_video5.jpg)">
+                        <a class="venobox" data-autoplay="true" data-vbtype="video" href="https://youtu.be/ibuUmMhD2Pg"
+                            data-gall="myGallery"><i class="fas fa-play-circle"></i></a>
+                    </div>
+                    <div class="video" style="background-image: url(./imgages/img_video6.jpg)">
+                        <a class="venobox" data-autoplay="true" data-vbtype="video" href="https://youtu.be/X96m876MiQk"
+                            data-gall="myGallery"><i class="fas fa-play-circle"></i></a>
+                    </div>
+                    <div class="video" style="background-image: url(./imgages/img_video7.jpg)">
+                        <a class="venobox" data-autoplay="true" data-vbtype="video" href="https://youtu.be/bx79vJP4zWI"
+                            data-gall="myGallery"><i class="fas fa-play-circle"></i></a>
+                    </div>
+                    <div class="video" style="background-image: url(./imgages/img_video8.jpg)">
+                        <a class="venobox" data-autoplay="true" data-vbtype="video" href="https://youtu.be/U6d54CI2Nds"
+                            data-gall="myGallery"><i class="fas fa-play-circle"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer-main></footer-main>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+
+    <script src="./venobox/venobox.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.venobox').venobox({
+                closeColor: '#f4f4f4',
+                spinColor: '#f4f4f4',
+                arrowsColor: '#f4f4f4',
+                closeBackground: '#17191D',
+                overlayColor: 'rgba(23,25,29,0.8)'
+            });
+        });
+    </script>
+
+    <script src="../js/index.js" type="module"></script>
+    <!-- Custom Javascript file -->
+    <script src="../js/home.js"></script>
+    <script src="../js/components/NavLogin.js" type="module" ></script>
+</body>
+
+</html>

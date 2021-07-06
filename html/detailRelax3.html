@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+
+    <link rel="stylesheet" href="../../css/reset.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <link rel="stylesheet" href="../css/styles__inforBlog.css">
+    <link rel="stylesheet" href="../css/styles_blog.css">
+    <link rel="stylesheet" href="../css/styles_home.css">
+
+</head>
+
+<body>
+    <navigation-bar></navigation-bar>
+    <main>
+        <site-title></site-title>
+    </main>
+    <div class="inforBlog--search">
+        <div>
+            <i id="search-icon" class="fas fa-search"></i>
+            <span id="search-bar" style="display: none;">
+                <i id="search" onclick="searchBlog()" class="fas fa-search"></i>
+                <strong id="fade"><input type="text" placeholder="Search..." id="txtSearch" /></strong>
+                <strong id="deleteSearch" onclick="deleteSearch()"><i class="fas fa-times"></i></strong>
+            </span>
+        </div>
+    </div>
+    <div class="inforBlog--container" id="exploree">
+
+    </div>
+    <div class="inforBlog--comment" data-aos="flip-up" data-aos-delay="200">
+        <div class="inforBlog--comment__body">
+            <div class="commnet--title">
+                <p>Commnent</p>
+            </div>
+            <div class="line--comment"></div>
+            <div class="comment--main">
+                <div class="author--imgage"><img src="../img/avatar.jpg" /></div>
+                <form>
+                    <textarea placeholder="Write your comment" id="txtComment"></textarea>
+                    <div class="btn--commnent">
+                        <button id="clear">Cancel</button>
+                        <input type="button" value="Publish" id="creatCmt" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="inforBlog--userComment" id="userComment">
+
+    </div>
+    <footer-main></footer-main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $("#search-icon").click(function () {
+            $("#search-bar").toggle();
+        });
+    </script>
+    <script src="../js/search.js"></script>
+
+
+    <script src="../js/index.js" type="module"></script>
+
+    <script>
+        let containerPost = document.querySelector(".inforBlog--container");
+        const postApi = "https://travel-blog-mindx.herokuapp.com/post_relax/2";
+        const getDataPost = async () => {
+            function start() {
+                getPosts(renderPosts);
+            }
+            start();
+
+            function getPosts(callback) {
+                fetch(postApi)
+                    .then(function (reponsive) {
+                        return reponsive.json();
+                    })
+                    .then(callback)
+            }
+            function renderPosts(dataPost) {
+                let htmls =
+                    `
+        <blog-main title="${dataPost.title}" mainHead="${dataPost.mainHead}" image="${dataPost.image}" mainWelcome="${dataPost.mainWelcome}"
+        mainFocus="${dataPost.mainFocus}" mainCate="${dataPost.mainCate}" mainContent="${dataPost.mainContent}" mainFoot="${dataPost.mainFoot}"></blog-main>
+        `
+                containerPost.innerHTML = htmls;
+            }
+        }
+        getDataPost();
+
+    </script>
+    <!-- Custom Javascript file -->
+    <script src="../js/home.js"></script>
+    <script src="../js/plugin.js"></script>
+    <script src="../js/handleCmt/hadleCmt_Relax1.js" type="module"></script>
+</body>
+
+</html>

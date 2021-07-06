@@ -1,0 +1,141 @@
+.blog {
+    /* display:  grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr; */
+    /* position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 64%; */
+    margin-bottom: 52px;
+    margin-top: 67px;
+}
+
+.blog--content {
+    display: flex;
+    justify-content: center;
+}
+
+.blog--description {
+    display: flex;
+    justify-content: center;
+}
+
+.blog--description__content {
+    width: 64%;
+}
+
+.blog--main {
+    margin-top: 48px;
+    font-size: 30px;
+}
+.blog--infor {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    opacity: 0.8;
+    text-align: justify;
+}
+
+.blog--container {
+    width: 64%;
+}
+
+.blog--container__main {
+    border: 1px solid rgba(242, 242, 242, 0.75);
+}
+.container--author, .container--infor {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.container--author {
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+}
+.container--author .date {
+    margin-left: 16px;
+    opacity: 0.6;
+}
+.author--imgage img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.container--infor{
+    margin-top: 20px;
+}
+.container--infor a {
+    text-decoration: none;
+    color: black;
+}
+.container--infor a:hover {
+    color: rgb(68, 145, 212);
+}
+
+.container--infor__head{
+    font-size: 24px;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    max-height: 33px;
+}
+.container--infor__body {
+    margin-top: 12px;
+    font-size: 18px;
+    opacity: 0.6;
+    
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    max-height: 48px;
+}
+
+.line {
+    border-bottom: 1px solid;
+    margin-top: 20px;
+    opacity: 0.3;
+}
+.container--infor__foot{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    align-items: center;
+    opacity: 0.8;
+}
+.foot--left{
+    display: flex;
+    align-items: center;
+    padding-right: 2px;
+}
+.foot--left div p {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 3px;
+}
+.social--comment{
+    margin-left: 20px;
+    cursor: pointer;
+}
+.social--comment:hover {
+    color: rgb(48, 108, 211);
+}
+.social--love {
+    cursor: pointer;
+}
+.social--love :hover {
+    color: rgb(214, 68, 68);
+}
+
+.blog--container .blog--container__main:nth-child(2) {
+    margin-top: 30px;
+}
+.blog--container .blog--container__main:nth-child(3) {
+    margin-top: 30px;
+}
